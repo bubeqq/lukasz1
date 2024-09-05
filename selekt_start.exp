@@ -1,0 +1,46 @@
+#!/usr/bin/expect
+set timeout -1
+set times 1;
+
+spawn multimon-ng -c -a stqc -n 
+	
+	expect { 
+	    "STQC:1904" {spawn ./1904_piwonice.sh; puts "alarm piwonice"; exp_continue}
+	    "STQC:1906" {spawn ./1906_cekow.sh; puts "alarm cekow"; exp_continue}
+	    "STQC:1908" {spawn ./1908_dobrzec.sh; puts "alarm dobrzec"; exp_continue}
+	    "STQC:1913" {spawn ./1913_pietrzykow.sh; puts "alarm pietzykow"; exp_continue}
+	    "STQC:1914" {spawn ./1914_krzyzowki.sh; puts "alarm krzyzowki"; exp_continue}
+	    "STQC:1915" {spawn ./1915_sulislawice.sh; puts "alarm sulislawice"; exp_continue}
+	    "STQC:1916" {spawn ./1916_przespolew.sh; puts "alarm przespolew"; exp_continue}	    
+	    "STQC:1927" {spawn ./1927_zelazkow.sh; puts "alarm zelazkow"; exp_continue}
+	    "STQC:1929" {spawn ./1929_goliszew.sh; puts "alarm goliszew"; exp_continue}
+	    "STQC:1932" {spawn ./1932_polko.sh; puts "alarm polko"; exp_continue}
+	    "STQC:1933" {spawn ./1933_strzalkow.sh; puts "alarm strzalkow"; exp_continue}
+	    "STQC:1934" {spawn ./1934_skarszew.sh puts "alarm skarszew"; exp_continue}
+	    "STQC:1936" {spawn ./1936_kozlatkow.sh; puts "alarm kozlatkow"; exp_continue}
+	    "STQC:1940" {spawn ./1940_lis.sh; puts "alarm lis"; exp_continue}
+	    "STQC:1941" {spawn ./1941_czartki.sh; puts "alarm czartki"; exp_continue}
+	    "STQC:1945" {spawn ./1945_brzeziny.sh; puts "alarm brzeziny"; exp_continue}
+	    "STQC:1947" {spawn ./1947_aleksandria.sh; puts "alarm aleksandria"; exp_continue}
+	    "STQC:1952" {spawn ./1952_zbiersk.sh; puts "alarm zbiersk"; exp_continue}
+	    "STQC:1953" {spawn ./1953_stawiszyn.sh; puts "alarm stawiszyn"; exp_continue}
+	    "STQC:1954" {spawn ./1954_mycielin.sh; puts "alarm mycielin"; exp_continue}
+	    "STQC:1955" {spawn ./1955_blizanow.sh; puts "alarm blizanow"; exp_continue}
+	    "STQC:1960" {spawn ./1960_szczytniki.sh; puts "alarm szczytniki"; exp_continue}
+	    "STQC:1961" {spawn ./1961_iwanowice.sh; puts "alarm iwanowice"; exp_continue}
+	    "STQC:1962" {spawn ./1962_staw.sh; puts "alarm staw"; exp_continue}
+	    "STQC:1963" {spawn ./1963_kamien.sh; puts "alarm kamien"; exp_continue}
+	    "STQC:1966" {spawn ./1966_morawin.sh; puts "alarm morawin"; exp_continue}
+	    "STQC:1971" {spawn ./1971_opatowek.sh; puts "alarm opatowek"; exp_continue}
+	    "STQC:1972" {spawn ./1972_tykadlow.sh; puts "alarm tykadlow"; exp_continue}
+	    "STQC:1973" {spawn ./1973_rajsko.sh; puts "alarm rajsko"; exp_continue}
+	    "STQC:1974" {spawn ./1974_chelmce.sh; puts "alarm chelmce"; exp_continue}
+	    "STQC:1975" {spawn ./1975_kozminek.sh; puts "alarm kozminek"; exp_continue}
+	    "STQC:1977" {spawn ./1977_borow.sh; puts "alarm borow"; exp_continue}
+	    "STQC:1980" {spawn ./1980_liskow.sh; puts "alarm liskow"; exp_continue}
+	    "STQC:1981" {spawn ./1981_godziesze.sh; puts "alarm godzesze"; exp_continue}
+	    "STQC:1984" {spawn ./1984_stobno.sh; puts "alarm stobno"; exp_continue}
+	    "STQC:1994" {spawn ./1994_tlokinia.sh; puts "alarm tlokinia"; exp_continue}
+	    "STQC:1909" {spawn ./1909_marcjanow.sh; puts "alarm marcjanow"; exp_continue}
+	     eof{}   
+}
